@@ -1,0 +1,17 @@
+version: '3.4'
+services:
+  app:
+    container_name: assestment
+    restart: always
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
+    links:
+      - mongo
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+      - "2701:27017"

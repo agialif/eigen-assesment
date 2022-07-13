@@ -27,7 +27,7 @@ const swaggerUi = require('swagger-ui-express')
 const apiDocumentation = require('./apidoc.json')
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(apiDocumentation))
 
-var url = 'mongodb+srv://agi:pB6OQmIrER3vsKw1@cluster0.xepmz.mongodb.net/?retryWrites=true&w=majority';
+var url = 'mongodb://mongo:27017/assesment';
 var connect = mongoose.connect(url, {
 
 });
